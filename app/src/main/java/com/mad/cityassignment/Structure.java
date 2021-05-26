@@ -1,0 +1,38 @@
+package com.mad.cityassignment;
+
+import java.io.Serializable;
+
+/**
+ * Represents a possible structure to be placed on the map. A structure simply contains a drawable
+ * int reference, and a string label to be shown in the selector.
+ */
+public class Structure implements Serializable
+{
+    private final int drawableId;
+    private String label;
+    private int cost;
+    private String name;
+
+    public Structure(int drawableId, String label, int cost)
+    {
+        this.drawableId = drawableId;
+        this.label = label;
+        this.cost = cost;
+    }
+
+    public int getDrawableId()
+    {
+        return drawableId;
+    }
+
+    public String getLabel()
+    {
+        return label;
+    }
+
+    public int getCost() {return cost;}
+
+    public void setName(String name) {this.name = name;}
+
+    public String getName() {return this.name;}
+}

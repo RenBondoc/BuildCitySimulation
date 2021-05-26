@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Details">
+
+    <ImageView
+        android:id="@+id/structureImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/structureName"></ImageView>
+
+
+    <EditText
+        android:id="@+id/structureName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="Structure Name"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toTopOf="@id/rowPosition"
+        app:layout_constraintEnd_toStartOf="@+id/setNameButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/structureImage" />
+
+    <TextView
+        android:id="@+id/rowPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROW"
+        android:textSize="30dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/colPosition"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/structureName" />
+
+    <TextView
+        android:id="@+id/colPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COL"
+        android:textSize="30dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/structureType"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowPosition" />
+
+    <TextView
+        android:id="@+id/structureType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="Structure"
+        android:textColor="@android:color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colPosition">
+    </TextView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/setNameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Name"
+        app:layout_constraintBottom_toTopOf="@+id/rowPosition"
+        app:layout_constraintLeft_toRightOf="@+id/structureName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/structureImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
